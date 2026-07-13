@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高级前端架构师 | 个人简历</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;500&family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #00f2ff;
+            --accent: #7000ff;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #030712;
+            color: #e2e8f0;
+            scroll-behavior: smooth;
+        }
+        .code-font { font-family: 'Fira Code', monospace; }
+        .glass {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .skill-tag {
+            background: rgba(0, 242, 255, 0.1);
+            border: 1px solid rgba(0, 242, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        .skill-tag:hover {
+            background: rgba(0, 242, 255, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 0 15px rgba(0, 242, 255, 0.3);
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 30px rgba(112, 0, 255, 0.2);
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .float-anim { animation: float 4s ease-in-out infinite; }
+    </style>
+</head>
+<body class="selection:bg-cyan-500 selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass py-4 px-8 flex justify-between items-center">
+        <div class="text-xl font-black tracking-tighter text-gradient">FRONTEND.ENGINEER</div>
+        <div class="space-x-8 hidden md:flex text-sm font-medium uppercase tracking-widest">
+            <a href="#about" class="hover:text-cyan-400 transition">关于</a>
+            <a href="#skills" class="hover:text-cyan-400 transition">技术栈</a>
+            <a href="#experience" class="hover:text-cyan-400 transition">实战</a>
+            <a href="#projects" class="hover:text-cyan-400 transition">项目</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="h-screen flex flex-col justify-center items-center px-4 relative overflow-hidden">
+        <div class="absolute w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[120px] -top-24 -left-24"></div>
+        <div class="absolute w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[120px] -bottom-24 -right-24"></div>
+        
+        <div class="z-10 text-center">
+            <h2 class="code-font text-cyan-400 mb-4 animate-pulse">const developer = "Senior Frontend Architect";</h2>
+            <h1 class="text-6xl md:text-8xl font-black mb-6 tracking-tight">
+                专注性能与<br><span class="text-gradient">交互极致体验</span>
+            </h1>
+            <p class="max-w-2xl mx-auto text-gray-400 text-lg md:text-xl leading-relaxed">
+                精通 <span class="text-white font-bold">Runtime 性能调优</span>、<span class="text-white font-bold">工程化架构体系</span> 及 <span class="text-white font-bold">高并发前端场景</span> 下的数据流治理。致力于构建不仅能运行，而且能“呼吸”的工业级 Web 应用。
+            </p>
+            <div class="mt-10">
+                <a href="#projects" class="px-8 py-4 bg-white text-black font-bold rounded-full hover:bg-cyan-400 transition-all duration-300 transform hover:scale-105 inline-block">
+                    查看我的核心工程案例
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack / Skills -->
+    <section id="skills" class="py-24 px-8 max-w-6xl mx-auto">
+        <h3 class="text-3xl font-bold mb-16 text-center italic underline decoration-cyan-500">TECHNICAL ECOSYSTEM / 技术生态</h3>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- UI & Engine -->
+            <div class="glass p-8 rounded-2xl glow-hover">
+                <div class="text-cyan-400 mb-4 font-bold text-lg">核心运行时 / Runtime</div>
+                <ul class="space-y-4 text-sm text-gray-300">
+                    <li class="flex items-start">
+                        <span class="mr-2 text-cyan-500">▹</span>
+                        <span>深入理解 <strong class="text-white">React Fiber 架构</strong>，具备对组件生命周期与 Diff 算法的底层调优经验。</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mr-2 text-cyan-500">▹</span>
+                        <span>精通 <strong class="text-white">Vue 3 响应式原理</strong>，能够基于 Composition API 构建高可复用的逻辑抽象层。</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mr-2 text-cyan-500">▹</span>
+                        <span>精通 <strong class="text-white">TypeScript 强类型体操</strong>，构建类型安全的企业级组件库。</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Performance -->
+            <div class="glass p-8 rounded-2xl glow-hover">
+                <div class="text-purple-400 mb-4 font-bold text-lg">工程化与性能 / Engineering</div>
+                <ul class="space-y-4 text-sm text-gray-300">
+                    <li class="flex items-start">
+                        <span class="mr-2 text-purple-500">▹</span>
+                        <span>精通 <strong class="text-white">Webpack/Vite 插件开发</strong>，解决大规模项目构建瓶颈及 HMR 延迟问题。</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mr-2 text-purple-500">▹</span>
+                        <span>实战落地 <strong class="text-white">Web Vitals 极致优化</strong>，LCP/FID 性能提升 200%+。</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mr-2 text-purple-500">▹</span>
+                        <span>熟练运用 <strong class="text-white">Micro-Frontends (微前端)</strong> 解决巨石应用拆分与增量开发。</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Visualization -->
+            <div class="glass p-8 rounded-2xl glow-hover">
+                <div class="text-orange-400 mb-4 font-bold text-lg">可视化与进阶 / Advanced</div>
+                <ul class="space-y-4 text-sm text-gray-300">
+                    <li class="flex items-start">
+                        <span class="mr-2 text-orange-500">▹</span>
+                        <span>基于 <strong class="text-white">Three.js / WebGL</strong> 构建沉浸式 3D 数字孪生看板。</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mr-2 text-orange-500">▹</span>
+                        <span>精通 <strong class="text-white">Node.js 中间件</strong> 架构设计，处理大规模 SSR 渲染与高并发日志收集。</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mr-2 text-orange-500">▹</span>
+                        <span>跨端方案 <strong class="text-white">Flutter / Electron</strong> 的深度定制化开发。</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real Experience -->
+    <section id="experience" class="py-24 bg-slate-900/50">
+        <div class="max-w-4xl mx-auto px-8">
+            <h3 class="text-3xl font-bold mb-12 text-gradient tracking-tight text-center">PROFESSIONAL EXPERIENCE</h3>
+            
+            <div class="space-y-12 border-l-2 border-cyan-500/30 pl-8 relative">
+                <!-- Job 1 -->
+                <div class="relative">
+                    <div class="absolute -left-[41px] top-0 w-4 h-4 bg-cyan-500 rounded-full shadow-[0_0_10px_#00f2ff]"></div>
+                    <div class="flex justify-between items-center mb-2">
+                        <h4 class="text-xl font-bold text-white">某顶尖互联网大厂 | 资深前端架构师</h4>
+                        <span class="text-gray-500 code-font">2021 - 至今</span>
+                    </div>
+                    <p class="text-gray-400 mb-4 italic">负责核心交易链路的前端重构与跨端架构设计</p>
+                    <ul class="text-sm text-gray-400 space-y-2">
+                        <li>• 架构了基于 <strong class="text-cyan-400">PWA + Edge Computing</strong> 的极致秒开方案，使得全球节点首屏耗时降低 40%。</li>
+                        <li>• 主导研发了企业内部自研组件库，通过 <strong class="text-cyan-400">Headless UI</strong> 理念实现 100% 样式自由定制。</li>
+                        <li>• 引入 <strong class="text-cyan-400">Rust-based SWC</strong> 替代传统 Babel 构建，提升 CI/CD 效能 5 倍以上。</li>
+                    </ul>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="relative">
+                    <div class="absolute -left-[41px] top-0 w-4 h-4 bg-gray-700 rounded-full"></div>
+                    <div class="flex justify-between items-center mb-2">
+                        <h4 class="text-xl font-bold text-white">某独角兽科技公司 | 高级前端开发</h4>
+                        <span class="text-gray-500 code-font">2018 - 2021</span>
+                    </div>
+                    <p class="text-gray-400 mb-4 italic">从 0 到 1 搭建高并发 SAAS 数据看板</p>
+                    <ul class="text-sm text-gray-400 space-y-2">
+                        <li>• 攻克了万级数据节点下的 <strong class="text-purple-400">Canvas 渲染瓶颈</strong>，实现了 60FPS 的丝滑滚动体验。</li>
+                        <li>• 建立了完善的前端监控与错误追踪系统（Sentry 深度定制），实现问题主动感知与毫秒级回溯。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section id="projects" class="py-24 px-8 max-w-7xl mx-auto">
+        <h3 class="text-3xl font-bold mb-16 text-center">FEATURED PROJECTS</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <!-- Project 1 -->
+            <div class="group relative rounded-3xl overflow-hidden glass border-white/5 transition-all duration-500 hover:-translate-y-2">
+                <div class="h-64 bg-gradient-to-br from-cyan-900 to-black flex items-center justify-center overflow-hidden">
+                    <div class="text-6xl font-black text-white/10 group-hover:scale-110 transition duration-700">DATA_VIZ</div>
+                </div>
+                <div class="p-8">
+                    <h5 class="text-2xl font-bold mb-3">多模态低代码引擎</h5>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                        一个基于 JSON Schema 驱动的高性能可视化搭建平台。自研高度可配置的渲染引擎，支持动态插槽渲染、原子化样式注入与复杂的逻辑编排。
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag px-3 py-1 rounded text-xs text-cyan-400">React Hooks</span>
+                        <span class="skill-tag px-3 py-1 rounded text-xs text-cyan-400">Zustand</span>
+                        <span class="skill-tag px-3 py-1 rounded text-xs text-cyan-400">Dnd-Kit</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="group relative rounded-3xl overflow-hidden glass border-white/5 transition-all duration-500 hover:-translate-y-2">
+                <div class="h-64 bg-gradient-to-br from-purple-900 to-black flex items-center justify-center overflow-hidden">
+                    <div class="text-6xl font-black text-white/10 group-hover:scale-110 transition duration-700">WEB_OS</div>
+                </div>
+                <div class="p-8">
+                    <h5 class="text-2xl font-bold mb-3">企业级协同分布式云端系统</h5>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                        基于 WebSocket 实现的高并发实时协作系统。采用 CRDT 冲突算法解决大规模并发编辑一致性问题，接入 Web Workers 处理海量计算任务。
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag px-3 py-1 rounded text-xs text-purple-400">WebAssembly</span>
+                        <span class="skill-tag px-3 py-1 rounded text-xs text-purple-400">Socket.io</span>
+                        <span class="skill-tag px-3 py-1 rounded text-xs text-purple-400">Redis</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer class="py-24 border-t border-white/5 text-center px-8">
+        <div class="max-w-4xl mx-auto">
+            <h4 class="text-4xl font-black mb-8 text-gradient">READY TO BUILD SOMETHING EPIC?</h4>
+            <p class="text-gray-400 mb-12 uppercase tracking-widest">目前开放机会咨询 / 期待与优秀的技术团队碰撞</p>
+            
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="mailto:yourname@example.com" class="glass px-10 py-4 rounded-full font-bold hover:bg-white hover:text-black transition duration-300">
+                    EMAIL ME
+                </a>
+                <a href="#" class="glass px-10 py-4 rounded-full font-bold hover:bg-cyan-500 hover:border-cyan-500 transition duration-300">
+                    GITHUB
+                </a>
+                <a href="#" class="glass px-10 py-4 rounded-full font-bold hover:bg-blue-600 hover:border-blue-600 transition duration-300">
+                    LINKEDIN
+                </a>
+            </div>
+            
+            <div class="mt-24 text-gray-600 code-font text-xs">
+                © 2024 DESIGNED & ENGINEERED BY YOUR_NAME. <br>
+                BUILT WITH HIGH PERFORMANCE RENDERING ENGINE.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的入场动画增强
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100');
+                        entry.target.classList.remove('translate-y-10');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
